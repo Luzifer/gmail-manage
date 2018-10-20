@@ -1,7 +1,8 @@
 // Apps Scripts may only run for ~5m so we limit the execution
-const MAX_DELETE_PER_LOOP = 1000
+var MAX_DELETE_PER_LOOP = 1000
 
 function cleanup() {
+  trashByQuery("older_than:10y")
   trashByQuery("label:newsletter older_than:6m")
 }
 

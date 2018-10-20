@@ -8,7 +8,7 @@ function cleanup() {
 function trashByQuery(query) {
   var threads = []
   var removedThreads = 0
-  
+
   do {
     threads = GmailApp.search(query)
     for (var i = 0; i < threads.length; i++) {
@@ -17,6 +17,6 @@ function trashByQuery(query) {
       removedThreads++
     }
   } while (threads.length > 0 && removedThreads < MAX_DELETE_PER_LOOP)
-    
+
   Logger.log('Removed %s threads for query "%s"', removedThreads, query)
 }

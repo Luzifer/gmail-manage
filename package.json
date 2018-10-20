@@ -1,0 +1,16 @@
+{
+  "babel": {
+    "presets": [
+      "google-apps-script"
+    ],
+    "comments": false
+  },
+  "scripts": {
+    "build": "babel src/*.js --out-file app.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "babel-preset-google-apps-script": "0.0.3"
+  }
+}

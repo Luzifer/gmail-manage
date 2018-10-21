@@ -56,5 +56,10 @@ function applyFilterDefinition() {
     createdFilters++
   }
 
-  console.log("%d filters removed, %d filters created, %d filters untouched", removedFilters, createdFilters, presentFilters.length - removedFilters)
+  console.log(
+    "%d filters removed, %d filters created, %d filters untouched",
+    removedFilters,
+    createdFilters,
+    Object.keys(presentFilters).length - removedFilters,
+  )
 }

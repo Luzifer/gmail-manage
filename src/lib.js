@@ -94,5 +94,5 @@ function trashByQuery(query) {
     }
   } while (threads.length > 0 && removedThreads < MAX_DELETE_PER_LOOP)
 
-  console.log('Removed %d threads for query "%s"', removedThreads, query)
+  return removedThreads
 }

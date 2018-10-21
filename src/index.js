@@ -37,12 +37,12 @@ function applyFilterDefinition() {
   for (let hash in presentFilters) {
     if (hash in definedFilters) continue
     Gmail.Users.Settings.Filters.remove("me", presentFilters[hash].id)
-    Logger.log(["Removed filter", presentFilters[hash]])
+    console.log(["Removed filter", presentFilters[hash]])
   }
 
   for (let hash in definedFilters) {
     if (hash in presentFilters) continue
     Gmail.Users.Settings.Filters.create(definedFilters[hash], "me")
-    Logger.log(["Created filter", definedFilters[hash]])
+    console.log(["Created filter", definedFilters[hash]])
   }
 }

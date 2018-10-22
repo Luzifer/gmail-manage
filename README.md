@@ -11,7 +11,7 @@ You can define:
 - Create a `config.js` from the `config.sample.js`
 - Get yourself a configured [clasp](https://github.com/google/clasp)
 - Create a Google Apps-Script project and activate the Gmail API in the corresponding GCP Project
-- Execute `npm ci && npm run build` to generate the App-Script version of the code
+- Execute `make build` to generate the App-Script version of the code
 - Execute a `clasp push` to upload the source code into your project
 
 If everything went well you now should have your `config.js` and an `app.js` inside your App-Script project. (In the web-UI they are called `.gs` files instead of `.js`.)
